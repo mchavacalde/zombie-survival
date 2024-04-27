@@ -24,25 +24,6 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, [myTiles.transparency16], TileScale.Sixteen);
-            case "level2":
-            case "level2":return tiles.createTilemap(hex`1000100004040404050202020202020202020202090909030a0202020202020c0c0202020b0b0b080a020202020202020c0202020b010b080a02020202020202020c02020b0e04030304040502020202020202020b0803090909030a02020202020202020b080a0b0b0b080304040405020202020106070b0b0b06090909030a02020202010b0b0b0b0b02020202080a0202020201010b01010b02020202080a020202020b010b0b0b0b02020202080a020202020b0b0b0b0b01020c0c02080a020202020b0b0b010b0b010c0c0c08030404040d0b0b0b0b0b0b0102020c06090909090d0b0b0b0b0b010102020c0202020202020b0b0b0b0b0b02020202020c0c0c0202`, img`
-. . . . . 2 . . . . . . . . . . 
-. . . . . 2 . . . . . . . . . . 
-2 2 2 . . 2 . . . . . . . . . . 
-. 2 2 . . 2 2 2 2 . . . . . . . 
-2 . . . . . . . 2 . . . . . . . 
-2 . . . . . . . 2 2 2 2 2 2 . . 
-2 . . 2 2 2 . . . . . . 2 2 . . 
-2 . . 2 . 2 . . . . . . 2 2 . . 
-2 2 2 2 . 2 2 2 2 2 . . 2 2 . . 
-. . . . . . . . . 2 . . 2 2 2 . 
-. . . . . . . . . 2 . . 2 2 2 . 
-. . . . . . . . . 2 . . 2 2 2 2 
-. . . . . . . . . 2 . . . . . . 
-. . . . . . . . . 2 . . . . . . 
-. . . . . . . . . 2 2 2 2 2 2 2 
-. . . . . . . . . . . . . . . . 
-`, [myTiles.transparency16,sprites.castle.tileGrass2,sprites.castle.tileGrass1,sprites.castle.tilePath5,sprites.castle.tilePath2,sprites.castle.tilePath3,sprites.castle.tilePath7,sprites.castle.tilePath9,sprites.castle.tilePath4,sprites.castle.tilePath8,sprites.castle.tilePath6,sprites.castle.tileGrass3,sprites.castle.tileDarkGrass2,sprites.dungeon.collectibleInsignia,sprites.castle.tilePath1], TileScale.Sixteen);
             case "level3":
             case "level3":return tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
 . . . . . . . . . . . . . . . . 
@@ -81,6 +62,25 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, [myTiles.transparency16], TileScale.Sixteen);
+            case "level2":
+            case "level2":return tiles.createTilemap(hex`100010000101010101020a0b0c0c0c0c0c0c0c0c0606060607030c0b0b0b0b0b0b0b0b0c0b0b0b0b08030b0c0c0c0c0c0c0c0c0b0c0c0c0c08030c0b0b0b0b0b0c0b0c0b0c0c0c0c08030b0b0b0b0b0b0b0b0c0b0c0b0b0b08030c0c0c0c0c0c0b0b0c0b0c090101070701010101020c0c0b0c0b0c080706060606060607030b0c0c0c0b0c08030c0c0c0c0c0c08030c0b0c0b0c0c08030c0c0c0c0c0c08030c0c0b0c0c0c08030c0c0c0c0c0c08030c0c0c0c0c0b08030c0c0c0c0c0c08030c0c0c0c0c0b08030c0c0c0c0c0c08030c0c0c0c0c0b04050c0c0c0c0c0c080701010101020c0c0c0b0b0b0b0c0c040606060606050c0c0c0c0b0b0b0c0c0c0c0b0b0b0b0b`, img`
+. . . . . 2 . 2 . . . . . . . . 
+. . . . . 2 . . 2 2 2 2 2 2 2 . 
+2 2 2 2 . . 2 . . . . . . . . 2 
+. . . . . . . 2 2 2 2 2 . 2 . 2 
+. . . . . . 2 2 2 2 2 2 2 2 . 2 
+. 2 2 2 . . . . . . . . 2 2 . 2 
+. . . . . . . . . . . . . 2 . 2 
+. . . . . . . . . . . 2 . . . 2 
+. . . . . . . . . . . . 2 . 2 . 
+. . . . . . . . . . . . . 2 . . 
+. . . . . . . . . . . . . . . . 
+2 . . . . . . . . . . . . . . . 
+2 . . . . . . . . . . . . . . . 
+2 . . . . . . . . . . . . . . . 
+. . . 2 2 2 2 . . . . . . . . . 
+. . . . 2 . 2 . . . . . 2 2 2 2 
+`, [myTiles.transparency16,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.collectibleInsignia,sprites.castle.tileGrass2,sprites.castle.tileGrass1], TileScale.Sixteen);
         }
         return null;
     })
