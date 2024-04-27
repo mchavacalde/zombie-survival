@@ -23,22 +23,18 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         `, chimuelo, 100, 0)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Portal, function (sprite, otherSprite) {
-    if (cuchillo) {
-        game.gameOver(true)
-        game.setGameOverEffect(true, effects.confetti)
-        game.setGameOverMessage(true, "YOU WIN!")
-    } else {
-        if (portal_touched < 1) {
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleInsignia, function (sprite, location) {
+    if (controller.player1.isPressed(ControllerButton.Right)) {
+        if (cuchillo) {
+            game.gameOver(true)
+            game.setGameOverEffect(true, effects.confetti)
+            game.setGameOverMessage(true, "YOU WIN!")
+        } else {
             game.showLongText("YOU DO NOT HAVE THE KNIFE, GO AND GET IT", DialogLayout.Bottom)
         }
     }
-    portal_touched = 1
-    pause(5000)
-    portal_touched = 0
 })
 let laser_sword: Sprite = null
-let portal_touched = 0
 let cuchillo = 0
 let chimuelo: Sprite = null
 tiles.setCurrentTilemap(tilemap`level2`)
@@ -94,28 +90,20 @@ let collectable_knife = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Knife)
-let inventario_cuchillo = sprites.create(assets.image`empty_inventory`, SpriteKind.InventoryItem)
-inventario_cuchillo.setStayInScreen(true)
 collectable_knife.setPosition(30, 120)
-inventario_cuchillo.setPosition(200, 0)
 cuchillo = 0
 let espada = 0
-portal_touched = 0
+let portal_touched = 0
 controller.moveSprite(chimuelo)
 info.setLife(20)
 chimuelo.setPosition(10, 10)
 music.play(music.stringPlayable("C5 B A G G A B C5 ", 130), music.PlaybackMode.LoopingInBackground)
 scene.cameraFollowSprite(chimuelo)
-let portal_1 = sprites.create(assets.image`portal`, SpriteKind.Portal)
-let portal_2 = sprites.create(assets.image`portal`, SpriteKind.Portal)
 forever(function () {
     if (chimuelo.overlapsWith(collectable_knife)) {
         cuchillo = 1
         sprites.destroy(collectable_knife)
-        inventario_cuchillo.setImage(assets.image`inventory_knife`)
+        game.showLongText("You learned the throw knife ability", DialogLayout.Bottom)
+        game.showLongText("Press \"A\" to throw the knife to your enemies", DialogLayout.Bottom)
     }
-    portal_1.x = 250
-    portal_1.y = 203
-    portal_2.x = 250
-    portal_2.y = 220
 })
