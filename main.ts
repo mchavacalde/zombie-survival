@@ -85,7 +85,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleInsignia, function (sprite, location) {
-    if (controller.player1.isPressed(ControllerButton.Right)) {
+    if (controller.player1.isPressed(ControllerButton.Up)) {
         if (player_knife) {
             game.gameOver(true)
             game.setGameOverEffect(true, effects.confetti)
