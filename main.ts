@@ -23,7 +23,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
-                `, chimuelo, -100, 0)
+                `, chimuelo, -200, 0)
         } else if (controller.player1.isPressed(ControllerButton.Up)) {
             laser_sword = sprites.createProjectileFromSprite(img`
                 . . . . . . . . . . . f f . . . 
@@ -42,7 +42,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
-                `, chimuelo, 0, -100)
+                `, chimuelo, 0, -200)
         } else if (controller.player1.isPressed(ControllerButton.Down)) {
             laser_sword = sprites.createProjectileFromSprite(img`
                 . . . . . . . . . . . f f . . . 
@@ -61,7 +61,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
-                `, chimuelo, 0, 100)
+                `, chimuelo, 0, 200)
         } else {
             laser_sword = sprites.createProjectileFromSprite(img`
                 . . . . . . . . . . . f f . . . 
@@ -80,7 +80,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
-                `, chimuelo, 100, 0)
+                `, chimuelo, 200, 0)
         }
     }
 })
