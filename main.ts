@@ -3,7 +3,7 @@ namespace SpriteKind {
     export const InventoryItem = SpriteKind.create()
     export const Portal = SpriteKind.create()
 }
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     laser_knife = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -95,7 +95,7 @@ forever(function () {
         cuchillo = 1
         sprites.destroy(collectable_knife)
         game.showLongText("You learned the throw knife ability", DialogLayout.Bottom)
-        game.showLongText("Press \"A\" to throw the knife to your enemies", DialogLayout.Bottom)
+        game.showLongText("Press \"B\" to throw the knife to your enemies", DialogLayout.Bottom)
     }
 })
 forever(function () {
